@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+.header{
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.header_title_text{
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+}
+
+.header_info{
+    width: 311px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deposit_btn{
+    background-color: #23ACDE;
+    border: none;
+    color: #fff;
+}
+.wallet_btn{
+    background-color: transparent;
+    width: 158px;
+    border: 2px solid #fff;
+    color: #23ACDE;
+}
+.deposit_btn, .wallet_btn{
+    cursor: pointer;
+    transition: .3s linear;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    height: 40px;
+}
+.deposit_btn:hover{
+    background-color: #0B5ED7;
+}
+/* MENU */
+.menu{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.menu_decoration_item{
+    width: 3.5px;
+    height: 3.5px;
+    background-color: #000;
+    border-radius: 50%;
+}
