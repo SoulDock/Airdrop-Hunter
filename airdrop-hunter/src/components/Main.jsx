@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import data from '../Data.json'
 import style from './componentsStyles/main.module.css'
+import InfoModal from './InfoModal';
 
 export default function Main() {
+    const [isInfoModal, setInfoModal] = useState(false)
+    const [isInfo, setInfo] = useState("")
   return (
+    <>
+    <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
     <div className={style.container}>
         {
             data.map((item, i)=>(
@@ -16,7 +21,7 @@ export default function Main() {
                     <div>
                         <p className={style.airdrop_subtext}>{item.text}</p>
                     </div>
-                    <button className={style.detail_button}>Read More</button>
+                    <button onClick={()=>{{setInfoModal(true)};setInfo(item.info)}} className={style.detail_button}>Read More</button>
                     <div className={style.profit}>
                         <p className={style.profit_title}>On Artificial AI:</p>
                         <div className={style.profit_info}>
@@ -71,5 +76,6 @@ export default function Main() {
             ))
         }
     </div>
+    </>
   )
 }
