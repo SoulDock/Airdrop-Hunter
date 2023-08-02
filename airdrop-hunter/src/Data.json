@@ -4,109 +4,408 @@
             "img":"./img/1.png",
             "name":"LayerZero",
             "text":"LayerZero is an Omnichain communication protocol designed to simplify message passing across chains.",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"Super Hot",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"78 %"
+            "probability":"78 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 2,
             "img":"./img/2.png",
             "name":"StarkNet",
             "text":"Starknet is a decentralized Validity-Rollup (often referred to as ZK-Rollup). It operates as a Layer 2 network over Ethereum.",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"Live",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"65 %"
+            "probability":"65 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 3,
             "img":"./img/3.png",
             "name":"Polygon zkEVM",
             "text":"Polygon zkEVM Beta is the leading ZK scaling solution that is equivalent to Ethereum Virtual Machine.",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"Live",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"65 %"
+            "probability":"65 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 4,
             "img":"./img/4.png",
             "name":"zkSync",
             "text":"Is a non-custodial (OTC) crypto wallet that allow you receive, store and send cryptocurrency asset.",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"BEST AND LIVE",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"73 %"
+            "probability":"73 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 5,
             "img":"./img/5.svg",
             "name":"Metamask",
             "text":"Is a non-custodial crypto wallet that allow you receive, store and send cryptocurrency asset.",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"Live",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"83 %"
+            "probability":"83 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                },
+                {
+                    "accounts":"40",
+                    "price": "1200"
+                },
+                {
+                    "accounts":"50",
+                    "price": "1500"
+                }
+            ]
         },
         {
             "id": 6,
             "img":"./img/6.png",
             "name":"Scroll",
             "text":"is Ethereum's second tier scaling solution that reduces transaction cost and speeds up transfers",
+            "subtext":"Choose a suitable tarif and click the button",
+            "button":"BUY",
+            "detail": true,
             "label":"Live",
             "labelStatus": true,
             "expected":"$500 - $5000",
-            "probability":"57 %"
+            "probability":"57 %",
+            "options":[
+                {
+                    "accounts":"5",
+                    "price": "150"
+                },
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                },
+                {
+                    "accounts":"40",
+                    "price": "1200"
+                },
+                {
+                    "accounts":"50",
+                    "price": "1500"
+                }
+            ]
         },
         {
             "id": 7,
             "img":"./img/7.png",
             "name":"Arbitrum Nova",
             "text":"Nova powers dapps with high transaction volumes that seek to drive costs even lower, for Game Developers, Social Projects, Blockchain dApps.",
+            "subtext":"",
+            "button":"Coming soon",
+            "detail": false,
             "label":"DEVELOPING",
             "labelStatus": false,
             "expected":"$500 - $5000",
-            "probability":"65 %"
+            "probability":"65 %",
+            "options":[
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 8,
             "img":"./img/8.svg",
             "name":"Aleo",
             "text":"Aleo is a privacy-focused blockchain platform that aims to enable developers to build decentralized applications (dApps) with strong privacy guarantees.",
+            "subtext":"If you developer click the button and submit form",
+            "button":"Submit your Script",
+            "detail": false,
             "label":"COMING SOON",
             "labelStatus": false,
             "expected":"$500 - $5000",
-            "probability":"90 %"
+            "probability":"90 %",
+            "options":[
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 9,
             "img":"./img/9.jpg",
             "name":"Venom",
             "text":"Venom is Layer-0 blockchain to power a global ecosystem of Web3 apps.",
+            "subtext":"If you developer click the button and submit form",
+            "button":"Submit your Script",
+            "detail": false,
             "label":"COMING SOON",
             "labelStatus": false,
             "expected":"$500 - $5000",
-            "probability":"68 %"
+            "probability":"68 %",
+            "options":[
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 10,
             "img": "./img/10.png",
             "name":"Zora",
             "text":"Zora is a decentralized protocol where anyone can permissionlessly buy, sell, and create. We've created a series of tools that makes it easy to get started building.",
+            "subtext":"If you developer click the button and submit form",
+            "button":"Submit your Script",
+            "detail": false,
             "label":"COMING SOON",
             "labelStatus": false,
             "expected":"$500 - $5000",
-            "probability":"66 %"
+            "probability":"66 %",
+            "options":[
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         },
         {
             "id": 11,
             "img": "./img/11.svg ",
             "name":"DeBank",
             "text":"DeBank creates a cryptocurrency wallet that allows users to access decentralized finance services.",
+            "subtext":"If you developer click the button and submit form",
+            "button":"Submit your Script",
+            "detail": false,
             "label":"COMING SOON",
             "labelStatus": false,
             "expected":"$500 - $5000",
-            "probability":"71 %"
+            "probability":"71 %",
+            "options":[
+                {
+                    "accounts":"10",
+                    "price": "300"
+                },
+                {
+                    "accounts":"15",
+                    "price": "450"
+                },
+                {
+                    "accounts":"20",
+                    "price": "600"
+                },
+                {
+                    "accounts":"25",
+                    "price": "750"
+                },
+                {
+                    "accounts":"30",
+                    "price": "900"
+                }
+            ]
         }
 ]

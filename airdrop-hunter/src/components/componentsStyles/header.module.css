@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 .header{
+    width: 100%;
+}
+.beta_text{
+    background-color: #23ACDE;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 15эpx;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header_inner{
     max-width: 1400px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     margin-bottom: 100px;
 }
 .header_title_text{

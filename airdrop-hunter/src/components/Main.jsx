@@ -6,15 +6,15 @@ export default function Main() {
   return (
     <div className={style.container}>
         {
-            data.map((data, i)=>(
+            data.map((item, i)=>(
                 <div className={style.airdrop_container} key={i}>
                 <div className={style.airdrop_wrapper}>
                     <div className={style.airdrop_title}>
-                        <img className={style.airdrop_icon} src={data.img} alt="" />
-                        <h2 className={style.airdrop_title_text}>{data.name}</h2>
+                        <img className={style.airdrop_icon} src={item.img} alt="" />
+                        <h2 className={style.airdrop_title_text}>{item.name}</h2>
                     </div>
                     <div>
-                        <p className={style.airdrop_subtext}>{data.text}</p>
+                        <p className={style.airdrop_subtext}>{item.text}</p>
                     </div>
                     <button className={style.detail_button}>Read More</button>
                     <div className={style.profit}>
@@ -22,11 +22,11 @@ export default function Main() {
                         <div className={style.profit_info}>
                             <div className={style.profit_col}>
                                 <p className={style.profit_coltitle}>expected airdrop</p>
-                                <p>{data.expected}</p>    
+                                <p>{item.expected}</p>    
                             </div>
                             <div className={style.profit_col}>
                                 <p className={style.profit_coltitle}>probability</p>
-                                <p>{data.probability}</p>                            
+                                <p>{item.probability}</p>                            
                             </div>
                         </div>
                     </div>
@@ -35,61 +35,35 @@ export default function Main() {
                         <p>Cost, $</p>
                         <p></p>
                     </div>
-                    <div className={style.airdrop_check}>
-                        {/* CHECK ITEMS */}
+                    {item.options.map((option,i)=>(
+                    <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
                             <div>
                                 <input type="checkbox" />
-                                <span>5 accounts</span>
+                                <span>{option.accounts} accounts</span>
                             </div>
-                            <dvi>150</dvi>
-                            <button className={style.check_detail_button}>Detail</button>
-                        </div>
-                        <div className={style.check_item}>
-                            <div>
-                                <input type="checkbox" />
-                                <span>10 accounts</span>
-                            </div>
-                            <dvi>150</dvi>
-                            <button className={style.check_detail_button}>Detail</button>
-                        </div>
-                        <div className={style.check_item}>
-                            <div>
-                                <input type="checkbox" />
-                                <span>20 accounts</span>
-                            </div>
-                            <dvi>150</dvi>
-                            <button className={style.check_detail_button}>Detail</button>
-                        </div>
-                        <div className={style.check_item}>
-                            <div>
-                                <input type="checkbox" />
-                                <span>25 accounts</span>
-                            </div>
-                            <dvi>150</dvi>
-                            <button className={style.check_detail_button}>Detail</button>
-                        </div>
-                        <div className={style.check_item}>
-                            <div>
-                                <input type="checkbox" />
-                                <span>30 accounts</span>
-                            </div>
-                            <dvi>150</dvi>
-                            <button className={style.check_detail_button}>Detail</button>
-                        </div>
+                            <div>{option.price}</div>
+                            {item.detail?
+                                <button className={style.check_detail_button}>Detail</button>
+                            :
+                                <div className={style.check_detail_button}></div>
+                            }
+                                
+                        </div>             
                     </div>
+                ))}
                     <div className={style.button_wrapper}>
                         <button className={style.buy_btn}>Buy</button>
                     </div>
-                    <p className={style.bottom_text}>Choose a suitable tarif and click the button</p>
+                    <p className={style.bottom_text}>{item.subtext}</p>
                 </div>
-                {data.labelStatus ? 
+                {item.labelStatus ? 
                     <div style={{backgroundColor:"#23ACDE"}} className={style.airdrop_label}>
-                        <span>{data.label}</span>
+                        <span>{item.label}</span>
                     </div>
                 :
                     <div style={{backgroundColor:"#BABDCE"}} className={style.airdrop_label}>
-                        <span>{data.label}</span>
+                        <span>{item.label}</span>
                     </div>
                 
                 }
