@@ -1,0 +1,118 @@
+.airdrop_container{
+    max-width: 416px;
+    max-height: 712px;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+    overflow: hidden;
+    position: relative;
+}
+.airdrop_label{
+    background-color: #23ACDE;
+    color: #fff;
+    position: absolute;
+    height: 24px;
+    top: 29px;
+    right: -31px;
+    width: 150px;
+    transform: rotate(45deg);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    line-height: 22px;
+}
+.airdrop_wrapper{
+    padding: 35px 25px;
+    text-align: left;
+}
+.airdrop_title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.airdrop_title_text{
+    font-weight: normal;
+    font-size: 18px;
+}
+.airdrop_icon{
+    max-width: 32px;
+}
+.airdrop_subtext{
+    color: #636775;
+}
+.bottom_text{
+    font-size: 12px;
+    text-align: center;
+}
+/* PROFIT */
+.profit{
+    border: 1px solid #636775;
+    border-radius: 10px;
+    padding: 10px;
+}
+.profit_title{
+    margin: 0px 0px 10px 0px;
+}
+.profit_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profit_info p {
+    margin: 0;
+}
+.profit_col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profit_coltitle{
+    color: #444444;
+}
+.detail_button{
+    border: none;
+    background: transparent;
+    color: #3D8AFF;
+}
+/* CHECK */
+.check_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F8F9FC;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.check_detail_button{
+    border: none;
+    background: transparent;
+    color: #3D8AFF;
+    text-decoration: underline;
+}
+.detail_button:hover, .check_detail_button:hover{
+    cursor: pointer;
+}
+/* BUTTON */
+
+.buy_btn{
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: 1px solid #23ACDE;
+    border-radius: 10px;
+    background-color: #E0E3F5;
+    color: #23ACDE;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .3s linear;
+}
+.buy_btn:hover{
+    cursor: pointer;
+    background-color: #23ACDE;
+    color: #fff;
+}
