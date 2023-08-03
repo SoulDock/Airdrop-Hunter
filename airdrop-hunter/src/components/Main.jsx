@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import data from '../Data.json'
 import style from './componentsStyles/main.module.css'
 import InfoModal from './InfoModal';
+import DetailModal from './DetailModal';
 
 export default function Main() {
     const [isInfoModal, setInfoModal] = useState(false)
     const [isInfo, setInfo] = useState("")
+    const [isDetailModal, setDetailModal] = useState(false)
   return (
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
+    <DetailModal open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
     <div className={style.container}>
+       
         {
             data.map((item, i)=>(
                 <div className={style.airdrop_container} key={i}>
@@ -49,7 +53,7 @@ export default function Main() {
                             </div>
                             <div>{option.price}</div>
                             {item.detail?
-                                <button className={style.check_detail_button}>Detail</button>
+                                <button onClick={()=>{{setDetailModal(true)}}} className={style.check_detail_button}>Detail</button>
                             :
                                 <div className={style.check_detail_button}></div>
                             }

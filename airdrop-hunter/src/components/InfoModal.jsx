@@ -1,5 +1,7 @@
 import React from 'react'
 import style from './componentsStyles/popUp.module.css'
+
+
 export default function InfoModal({open, onClose, infoText}) {
     if(!open) return null
   return (
