@@ -1,0 +1,314 @@
+[
+    {
+        "id":1,
+        "name":"Generated EVM wallets",
+        "subtext":"Automatic generation occurs after payment of the tariff",
+        "options":[
+            {
+                "position":"1",
+                "text":"Generation of wallets according to the tariff"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "name":"Initial actions",
+        "subtext":"Operations are separated by time for a period of 1-5 days",
+        "options":[
+            {
+                "position":"1",
+                "text":"Init tariff accounts"
+            },
+            {
+                "position":"2",
+                "text":"Distribution funds to wallets"
+            },
+            {
+                "position":"3",
+                "text":"Swap BNB to Matic on Polygon via sushi crosschain bridge"
+            },
+            {
+                "position":"4",
+                "text":" Swap Matic to USDT on ApeSwap"
+            },
+            {
+                "position":"5",
+                "text":"Approve USDT for Stargate"
+            },
+            {
+                "position":"6",
+                "text":"Transfer USDT to BNB"
+            },
+            {
+                "position":"7",
+                "text":"Approve USDT for deposit to Stargate pool"
+            },
+            {
+                "position":"8",
+                "text":"Deposit USDT to the Stargate pool"
+            },
+            {
+                "position":"9",
+                "text":"Remove USDT from the Stargate pool"
+            },
+            {
+                "position":"10",
+                "text":"Approve USDT to deposit to Radiant"
+            },
+            {
+                "position":"11",
+                "text":"Deposit USDT to Radiant"
+            },
+            {
+                "position":"12",
+                "text":"Approve USDT in Radiant before borrowing on Polygon"
+            },
+            {
+                "position":"13",
+                "text":"Approve delegation of USDT in Radiant before borrowing on Polygon"
+            },
+            {
+                "position":"14",
+                "text":"Borrow USDT from Radiant on Polygon"
+            },
+            {
+                "position":"15",
+                "text":"Approve USDT in Stargate before transfer to BNB"
+            },
+            {
+                "position":"16",
+                "text":"Transfer USDT to BNB with Stargate Bridge"
+            },
+            {
+                "position":"17",
+                "text":"Approve USDT repay to Radiant"
+            },
+            {
+                "position":"18",
+                "text":"Repay USDT to Radiant"
+            },
+            {
+                "position":"19",
+                "text":" Withdraw deposited USDT from Radiant"
+            },
+            {
+                "position":"20",
+                "text":"Approve USDT before swap on Sushiswap"
+            },
+            {
+                "position":"21",
+                "text":"Swap all USDT to BNB on SushiSwap"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "name":"Increase in positions",
+        "subtext":"Operations will start immediately after the end of circle 2",
+        "options":[
+            {
+                "position":"1",
+                "text":"Init tariff contract"
+            },
+            {
+                "position":"2",
+                "text":"Circle payment"
+            },
+            {
+                "position":"3",
+                "text":"Swap BNB to Matic on Polygon via sushi crosschain bridge"
+            },
+            {
+                "position":"4",
+                "text":"Swap Matic to USDT on ApeSwap"
+            },
+            {
+                "position":"5",
+                "text":"Approve USDT for Stargate"
+            },
+            {
+                "position":"6",
+                "text":"Transfer USDT to BNB"
+            },
+            {
+                "position":"7",
+                "text":"Approve USDT to deposit to Radiant"
+            },
+            {
+                "position":"8",
+                "text":"Deposit USDT to Radiant"
+            },
+            {
+                "position":"9",
+                "text":"Approve USDT in Radiant before borrowing on Polygon"
+            },
+            {
+                "position":"10",
+                "text":"Approve delegation of USDT in Radiant before borrowing on Polygon"
+            },
+            {
+                "position":"11",
+                "text":"Borrow USDT from Radiant on Polygon"
+            },
+            {
+                "position":"12",
+                "text":"Approve USDT in Stargate before transfer to BNB"
+            },
+            {
+                "position":"13",
+                "text":"Transfer USDT to BNB with Stargate Bridge"
+            },
+            {
+                "position":"14",
+                "text":"Approve USDT repay to Radiant"
+            },
+            {
+                "position":"15",
+                "text":"Repay USDT to Radiant"
+            },
+            {
+                "position":"16",
+                "text":"Withdraw deposited USDT from Radiant"
+            },
+            {
+                "position":"17",
+                "text":"Approve USDT before swap on Sushiswap"
+            },
+            {
+                "position":"18",
+                "text":"Swap all USDT to BNB on SushiSwap"
+            }
+        ]
+    },
+    {
+        "id":4,
+        "name":"Maximum power",
+        "subtext":"Operations will start immediately after the end of circle 3",
+        "options":[
+            {
+                "position":"1",
+                "text":" Init tariff contract"
+            },
+            {
+                "position":"2",
+                "text":"Circle payment"
+            },
+            {
+                "position":"3",
+                "text":"Bridge 15% BNB → ETH (Arbitrum) [sushi]"
+            },
+            {
+                "position":"4",
+                "text":"Bridge 15% BNB → ETH (Optimism) [sushi]"
+            },
+            {
+                "position":"5",
+                "text":"Swap 90% BNB → USDT [sushi]"
+            },
+            {
+                "position":"6",
+                "text":"Approve for Bridge 100% USDC (BNB"
+            },
+            {
+                "position":"7",
+                "text":"Bridge 25% USDT(BNB) → USDC(Optimism) [stargate]"
+            },
+            {
+                "position":"8",
+                "text":"Bridge 25% USDT(BNB) → USDC(Optimism) [stargate]"
+            },
+            {
+                "position":"9",
+                "text":"Bridge 25% USDT(BNB) → USDC(Optimism) [stargate]"
+            },
+            {
+                "position":"10",
+                "text":"Bridge 25% USDT(BNB) → USDC(Optimism) [stargate]"
+            },
+            {
+                "position":"11",
+                "text":"Approve for Bridge 100% USDC (Optimism)"
+            },
+            {
+                "position":"12",
+                "text":"Bridge 25% USDC(Optimism) → USDC(Arbitrum) [stargate]"
+            },
+            {
+                "position":"13",
+                "text":"Bridge 25% USDC(Optimism) → USDC(Arbitrum) [stargate]"
+            },
+            {
+                "position":"14",
+                "text":"Bridge 25% USDC(Optimism) → USDC(Arbitrum) [stargate]"
+            },
+            {
+                "position":"15",
+                "text":"Bridge 25% USDC(Optimism) → USDC(Arbitrum) [stargate]"
+            },
+            {
+                "position":"16",
+                "text":"Approve for Swap 100% USDC (Arbitrum)"
+            },
+            {
+                "position":"17",
+                "text":"Swap 100% USDC(Arbitrum) → BTC.b(Arbitrum) [joe]"
+            },
+            {
+                "position":"18",
+                "text":"Bridge 50% BTC.b(Arbitrum) → BTC.b(Optimism) [bitcoinbridge]"
+            },
+            {
+                "position":"19",
+                "text":"Bridge 50% BTC.b(Arbitrum) → BTC.b(Optimism) [bitcoinbridge]"
+            },
+            {
+                "position":"20",
+                "text":"Bridge 100% BTC.b(Optimism) → BTC.b(BNB) [bitcoinbridge]"
+            },
+            {
+                "position":"21",
+                "text":"Bridge 100% BTC.b(BNB) → Bridge BTC.b(Arbitrum) [bitcoinbridge]"
+            },
+            {
+                "position":"22",
+                "text":"Approve for Swap 100% BTC.b (Arbitrum)"
+            },
+            {
+                "position":"23",
+                "text":"Swap 100% BTC.b(Arbitrum) → 100% USDC(Arbitrum) [joe]"
+            },
+            {
+                "position":"24",
+                "text":"Approve for Bridge 100% USDC (Arbitrum)"
+            },
+            {
+                "position":"25",
+                "text":"Bridge 25% USDC(Arbitrum) → 25% USDC(BNB) [stargate]"
+            },
+            {
+                "position":"26",
+                "text":"Bridge 25% USDC(Arbitrum) → 25% USDC(BNB) [stargate]"
+            },
+            {
+                "position":"27",
+                "text":"Bridge 25% USDC(Arbitrum) → 25% USDC(BNB) [stargate]"
+            },
+            {
+                "position":"28",
+                "text":"Bridge 25% USDC(Arbitrum) → 25% USDC(BNB) [stargate]"
+            },
+            {
+                "position":"29",
+                "text":"Approve USDT for Swap"
+            },
+            {
+                "position":"30",
+                "text":"Swap 100% USDT -> BNB (BSC) [sushi]"
+            },
+            {
+                "position":"31",
+                "text":"Swap (0-90%) BNB -> (USDT or USDC or DAI or BUSD) [sushi]"
+            }
+        ]
+    }
+]
