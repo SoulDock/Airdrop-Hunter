@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import style from './componentsStyles/header.module.css'
+import DepositModal from './DepositModal'
 export default function ({open, onClose}) {
     const [isMenu, setMenu] = useState(false)
+    const [isInfoModal, setInfoModal] = useState(false)
     const toggleMenu = ()=>{
         isMenu ? setMenu(false) : setMenu(true)
     }
@@ -16,6 +18,7 @@ export default function ({open, onClose}) {
     })
   return (
     <div className={style.header}>
+        <DepositModal open={isInfoModal} onClose={()=>setInfoModal(false)}/>
         <div className={style.beta_text}>This project is beta. DYOR</div>
         <div className={style.header_inner}>
             <div className={style.header_title}>
@@ -23,7 +26,7 @@ export default function ({open, onClose}) {
                 <h3 className={style.header_title_text} style={{color:"#23ACDE"}}>HUNTER</h3 >
             </div>
             <div className={style.header_info}>
-                <button className={style.deposit_btn}>Deposit</button>
+                <button onClick={()=>setInfoModal(true)} className={style.deposit_btn}>Deposit</button>
                 <button className={style.wallet_btn}>Connect Wallet</button>
                 <div ref={menuRef} className={style.menu_wrapper}>
                     <div  onClick={()=>toggleMenu()} className={style.menu}>

@@ -1,4 +1,9 @@
+
 .overlay{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.614);
@@ -7,17 +12,17 @@
     justify-content: center;
     align-items: center;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow-y: hidden;
-    z-index: 999;
+    z-index: 1055;
 }
+
 .modal_container{
     max-width: 500px;
+    overflow: hidden ;
 }
 .modal_container_details{
     max-width: 900px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 .modal_container,.modal_container_details{
     padding: 16px;
@@ -59,6 +64,13 @@
 }
 .details_options{
 }
+.details_sm{
+    width: 300px;
+    background-color: #F7F8FA;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 300px;
+}
 .details_option{
     display: flex;
     gap: 20px;
@@ -76,4 +88,65 @@
     font-size: 20px;
     color: #23ACDE;
     font-weight: 500;
+}
+.details_unwrapped{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    text-align: left;
+}
+.btn_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.popup_btn{
+    border: 1px solid;
+    width: 360px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #23ACDE;
+    background-color: #E0E3F5;
+}
+
+
+/* CONNECT WALLET */
+.connect_wallet{
+    background-color: #F7F8FA;
+    border-radius: 10px;
+    padding: 10px;
+}
+.connect_wallet_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 10px 0;
+}
+.connect_item{
+    display: flex;
+    align-items: flex-start;
+}
+.connect_item h4, .connect_item p{
+    margin: 0;
+}
+.connect_btn{
+    width: 120px;
+    height: 45px;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #23ACDE;
+    transition: .3s linear;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+.connect_btn:hover{
+    cursor: pointer;
+    background-color: #0B5ED7;
 }

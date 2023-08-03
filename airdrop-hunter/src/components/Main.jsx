@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import data from '../Data.json'
 import style from './componentsStyles/main.module.css'
+import Header from './Header'
 import InfoModal from './InfoModal';
 import DetailModal from './DetailModal';
+
 
 export default function Main() {
     const [isInfoModal, setInfoModal] = useState(false)
@@ -12,8 +14,8 @@ export default function Main() {
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
     <DetailModal open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
+    <Header/>
     <div className={style.container}>
-       
         {
             data.map((item, i)=>(
                 <div className={style.airdrop_container} key={i}>
