@@ -53,7 +53,30 @@
     text-align: left;
     line-height: 25px;
 }
-
+.close_btn{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.close_btn:hover{
+    cursor: pointer;
+}
+.close_btn_item1,.close_btn_item2{
+    background-color: #6d6c6d;
+    height: 2px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+}
+.close_btn_item1{
+    transform: rotate(45deg);
+}
+.close_btn_item2{
+    transform: rotate(-45deg);
+}
 /* DETAIL MODAL */
 .details{
     width: 300px;
@@ -65,12 +88,26 @@
     display: flex;
     gap: 20px;
 }
+.details_title_wrapper{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.details_title_wrapper h3{
+    margin: 10px 0;
+}
+.details_title_wrapper span{
+    font-size: 14px;
+}
 .details_sm{
     width: 300px;
     background-color: #F7F8FA;
     border-radius: 10px;
     padding: 20px;
     max-height: 300px;
+}
+.airdrop_name{
+    color: #23ACDE;
+    margin-left: 5px;
 }
 .details_option{
     display: flex;
@@ -79,10 +116,15 @@
     padding: 10px;
     border-bottom: 1px solid #dddddd;
 }
-.details_subtext{
+.details_subtext,.details_subtext_center{
     color: #23ACDE;
     font-size: 10px;
+}
+.details_subtext{
     text-align: left;
+}
+.details_subtext_center{
+    text-align: center;
 }
 .details_title{
     margin: 0 0 10px 0;
@@ -94,9 +136,12 @@
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    padding: 5px;
+    padding: 10px 5px;
     align-items: center;
     text-align: left;
+    font-size: 12px;
+    background-color: #E0E3F5;
+    border-bottom: 1px solid #F7F8FA;
 }
 .details_btn{
     border: none;
@@ -104,6 +149,10 @@
     color: #23ACDE;
     text-decoration: underline;
     font-size: 16px;
+}
+.details_btn:hover{
+    cursor: pointer;
+    outline: none;
 }
 .btn_wrapper{
     width: 100%;
@@ -248,7 +297,10 @@
 .row_mid{
     width: 20%;
 }
-.row_btn_dsbld,.row_btn,.row_name{
+.row_btn_dsbld,.row_btn{
+    width: 40%;
+}
+.row_name{
     width: 30%;
 }
 .row_btn{
@@ -285,7 +337,11 @@
 }
 @media screen and (max-width:595px){
     .modal_container,.modal_container_details,.container_buy_tarif{
-        margin: 0 10px;
+        margin: 10px;
+    }
+    .info{
+        max-height: 400px;
+        overflow-y: scroll;
     }
     .row_name{
         flex-wrap: wrap;

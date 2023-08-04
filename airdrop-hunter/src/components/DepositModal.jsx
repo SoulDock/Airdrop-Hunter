@@ -22,7 +22,10 @@ export default function DepositModal({open, onClose}) {
                         <a href="">RU</a>
                     </div>
                 </div>
-                <span onClick={onClose}>X</span>
+                <div  className={style.close_btn} onClick={onClose}>
+                    <div className={style.close_btn_item1}></div>
+                    <div className={style.close_btn_item2}></div>
+                </div>
             </div>
             <div className={style.content}>
                 <div>

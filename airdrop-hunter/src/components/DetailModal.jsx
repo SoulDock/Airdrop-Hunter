@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './componentsStyles/popUp.module.css'
 import options from '../Options.json'
 import BuyTariffModal from './BuyTariffModal';
-export default function DetailModal({open, onClose}) {
+export default function DetailModal({open, onClose, price, wallets, name}) {
     const [isBuyModal,setBuyModal] = useState(false)
     const [isOption, setOption] = useState([
         {position: '1', text: 'Generation of wallets according to the tariff'}]);
@@ -14,11 +14,28 @@ export default function DetailModal({open, onClose}) {
     {return null} 
   return (
     <div onClick={onClose} className={style.overlay}>
-        <BuyTariffModal isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
+        <BuyTariffModal tarifPrice={price} isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
         <div onClick={(e)=>{e.stopPropagation()}} className={style.modal_container_details}>
             <div className={style.top_layer}>
-                <h3>Detailed information</h3>
-                <span onClick={onClose}>X</span>
+                <div className={style.details_title_wrapper}>
+                    <h3>Detailed information {price}</h3>
+                    <div>
+                        <span>Airdrop name:</span>
+                        <span className={style.airdrop_name}>{name}</span>
+                    </div>
+                    <div>
+                        <span>Tariff:</span>
+                        <span className={style.airdrop_name}>{wallets}</span>
+                    </div>
+                    <div>
+                        <span>Number of wallets:</span>
+                        <span className={style.airdrop_name}>{wallets}</span>
+                    </div>
+                </div>
+                <div  className={style.close_btn} onClick={onClose}>
+                    <div className={style.close_btn_item1}></div>
+                    <div className={style.close_btn_item2}></div>
+                </div>
             </div>
             <div className={style.details_wrapper}>
                 <div className={style.details_sm}>
@@ -44,11 +61,12 @@ export default function DetailModal({open, onClose}) {
                     <div>
                         <div>{isOption.map((item,i)=>(
                             <div className={style.details_unwrapped}>
+                                <span>{item.position}</span>
                                 <img style={{maxWidth:"20px"}} src={item.img} alt="" />
                                 {item.text}
                             </div>
                         ))}</div>
-                        <p className={style.details_subtext}>{isSubtext}</p>
+                        <p className={style.details_subtext_center}>{isSubtext}</p>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,10 @@ export default function InfoModal({open, onClose, infoText}) {
         <div onClick={(e)=>{e.stopPropagation()}} className={style.modal_container}>
             <div className={style.top_layer}>
                 <h3>Info</h3>
-                <span onClick={onClose}>X</span>
+                <div  className={style.close_btn} onClick={onClose}>
+                    <div className={style.close_btn_item1}></div>
+                    <div className={style.close_btn_item2}></div>
+                </div>
             </div>
             <div className={style.info}>
                 <p>{infoText}</p>

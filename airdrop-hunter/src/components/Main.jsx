@@ -4,16 +4,22 @@ import style from './componentsStyles/main.module.css'
 import Header from './Header'
 import InfoModal from './InfoModal';
 import DetailModal from './DetailModal';
+import BuyTariffModal from './BuyTariffModal';
 
 
 export default function Main() {
     const [isInfoModal, setInfoModal] = useState(false)
     const [isInfo, setInfo] = useState("")
     const [isDetailModal, setDetailModal] = useState(false)
+    const [isBuyModal,setBuyModal] = useState(false)
+    const [isSelectedAmount, setSelectedAmount] = useState("")
+    const [isNumberOfWalets, setNumberOfWalets] = useState("")
+    const [isTarifName, setTarifName] = useState("")
   return (
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
-    <DetailModal open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
+    <DetailModal name={isTarifName} wallets={isNumberOfWalets} price={isSelectedAmount} open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
+    <BuyTariffModal isOpen={isBuyModal} Close={()=>setBuyModal(false)} tarifPrice={isSelectedAmount} ></BuyTariffModal>
     <Header/>
     <div className={style.container}>
         {
@@ -50,12 +56,12 @@ export default function Main() {
                     <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
                             <div>
-                                <input type="checkbox" />
+                                <input key={i} type="checkbox" onClick={()=> setSelectedAmount(option.price)} />
                                 <span>{option.accounts} accounts</span>
                             </div>
                             <div>{option.price}</div>
                             {item.detail?
-                                <button onClick={()=>{{setDetailModal(true)}}} className={style.check_detail_button}>Detail</button>
+                                <button onClick={()=>{{setDetailModal(true);setNumberOfWalets(option.accounts);setTarifName(item.name)}}} className={style.check_detail_button}>Detail</button>
                             :
                                 <div className={style.check_detail_button}></div>
                             }
@@ -64,7 +70,7 @@ export default function Main() {
                     </div>
                 ))}
                     <div className={style.button_wrapper}>
-                        <button className={style.buy_btn}>Buy</button>
+                        <button onClick={()=>setBuyModal(true)} className={style.buy_btn}>Buy</button>
                     </div>
                     <p className={style.bottom_text}>{item.subtext}</p>
                 </div>
