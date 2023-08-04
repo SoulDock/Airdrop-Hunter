@@ -1,6 +1,6 @@
 .container{
     max-width: 1320px;
-    padding: 0, 12px;
+    padding: 0, 10px;
     margin: 0 auto;
     margin-bottom: 150px;
     display: flex;
@@ -146,3 +146,9 @@
     background-color: #23ACDE;
     color: #fff;
 }
+@media screen and (max-width:420px) {
+    .airdrop_container{
+        margin: 0 10px;
+    }
+}
+

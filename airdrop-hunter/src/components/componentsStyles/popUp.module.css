@@ -24,12 +24,15 @@
     max-height: 80vh;
     overflow-y: scroll;
 }
-.modal_container,.modal_container_details{
+.modal_container,.modal_container_details,.container_buy_tarif{
     padding: 16px;
 
     background-color: #fff;
     box-shadow: 0px 10px 30px rgba(69, 88, 190, 0.1);
     border-radius: 10px;
+}
+.container_buy_tarif{
+    max-width: 700px;
 }
 .top_layer{
     display: flex;
@@ -61,8 +64,6 @@
 .details_wrapper{
     display: flex;
     gap: 20px;
-}
-.details_options{
 }
 .details_sm{
     width: 300px;
@@ -97,6 +98,13 @@
     align-items: center;
     text-align: left;
 }
+.details_btn{
+    border: none;
+    background-color: transparent;
+    color: #23ACDE;
+    text-decoration: underline;
+    font-size: 16px;
+}
 .btn_wrapper{
     width: 100%;
     display: flex;
@@ -112,6 +120,12 @@
     border-radius: 10px;
     color: #23ACDE;
     background-color: #E0E3F5;
+    transition: .3s linear;
+}
+.popup_btn:hover{
+    cursor: pointer;
+    color: #E0E3F5;
+    background-color: #23ACDE;
 }
 
 
@@ -120,6 +134,7 @@
     background-color: #F7F8FA;
     border-radius: 10px;
     padding: 10px;
+    font-size: 12px;
 }
 .connect_wallet_wrapper{
     display: flex;
@@ -131,6 +146,7 @@
 .connect_item{
     display: flex;
     align-items: flex-start;
+    gap: 10px;
 }
 .connect_item h4, .connect_item p{
     margin: 0;
@@ -149,4 +165,129 @@
 .connect_btn:hover{
     cursor: pointer;
     background-color: #0B5ED7;
+}
+.select_net,.select_amount{
+    border: 1px solid #E0E3F5;
+    border-radius: 10px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.net_button{
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 50%;
+    padding: 10px 0;
+}
+.amout_btn_wrapper{
+    display: flex;
+    gap: 5px;
+}
+.amout_title{
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 500;
+}
+.amount_btn{
+    background-color: #6d6c6d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.amount_btn:focus{
+    background-color: #23ACDE;
+}
+.deposit_title_wrapper{
+    max-width: 400px;
+}
+.deposit_title_wrapper h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.deposit_subtitle{
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+.deposit_subtitle p{
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+/*  */
+.grp{
+    background-color: #F0F0F0;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+.grp_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grp_row1{
+    justify-content: center;
+}
+.row_name p{
+  margin: 12px;
+}
+.row_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row_mid{
+    width: 20%;
+}
+.row_btn_dsbld,.row_btn,.row_name{
+    width: 30%;
+}
+.row_btn{
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #23ACDE;
+    border: none;
+    font-size: 16px;
+}
+.check_area{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 0 0 0 10px;
+}
+.buytarif_description{
+    font-size: 14px;
+    color: #6d6c6d;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:990px) {
+    .details_wrapper{
+        flex-direction: column;
+    }
+    .details_sm{
+        width:fit-content;
+    }
+    .details{
+        width:fit-content;
+    }
+}
+@media screen and (max-width:595px){
+    .modal_container,.modal_container_details,.container_buy_tarif{
+        margin: 0 10px;
+    }
+    .row_name{
+        flex-wrap: wrap;
+    }
 }

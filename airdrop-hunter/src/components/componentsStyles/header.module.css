@@ -16,6 +16,7 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 100px;
+    padding: 0 10px;
 }
 .header_title_text{
     font-family: 'JetBrains Mono', monospace;
@@ -106,4 +107,20 @@
 }
 .menu_link:hover{
     color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .deposit_btn{
+        display: none;
+    }
+    .header_title{
+        display: none;
+    }
+    .header_inner{
+        justify-content: flex-end;
+    }
+    .header_info{
+        justify-content: flex-end;
+        gap: 10px;
+    }
 }

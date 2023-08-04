@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import style from './componentsStyles/popUp.module.css'
 import options from '../Options.json'
-
+import BuyTariffModal from './BuyTariffModal';
 export default function DetailModal({open, onClose}) {
+    const [isBuyModal,setBuyModal] = useState(false)
     const [isOption, setOption] = useState([
         {position: '1', text: 'Generation of wallets according to the tariff'}]);
     const [isSubtext, setSubtext] = useState("Automatic generation occurs after payment of the tariff")
-    if(!open) return null
+    if(isBuyModal){
+        return <BuyTariffModal isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
+    }
+    else if(!open)
+    {return null} 
   return (
     <div onClick={onClose} className={style.overlay}>
+        <BuyTariffModal isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
         <div onClick={(e)=>{e.stopPropagation()}} className={style.modal_container_details}>
             <div className={style.top_layer}>
                 <h3>Detailed information</h3>
@@ -22,7 +28,7 @@ export default function DetailModal({open, onClose}) {
                             <div>
                                 <div className={style.details_option} key={i}>
                                     <span>Circle{item.id}</span>
-                                    <button key={i} onClick={()=>{setOption([...item.options]); setSubtext(item.subtext)}}>{item.name}</button>
+                                    <button className={style.details_btn} key={i} onClick={()=>{setOption([...item.options]); setSubtext(item.subtext)}}>{item.name}</button>
                                     {console.log(isOption)}
                                 </div>
                             </div>
@@ -47,7 +53,7 @@ export default function DetailModal({open, onClose}) {
                 </div>
             </div>
             <div className={style.btn_wrapper}>
-                <button className={style.popup_btn}>Buy Tariff</button>
+                <button onClick={()=>{setBuyModal(true);onClose()}} className={style.popup_btn}>Buy Tariff</button>
             </div>
         </div>
     </div>
