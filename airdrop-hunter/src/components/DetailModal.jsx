@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import style from './componentsStyles/popUp.module.css'
 import options from '../Options.json'
 import BuyTariffModal from './BuyTariffModal';
@@ -8,17 +8,17 @@ export default function DetailModal({open, onClose, price, wallets, name}) {
         {position: '1', text: 'Generation of wallets according to the tariff'}]);
     const [isSubtext, setSubtext] = useState("Automatic generation occurs after payment of the tariff")
     if(isBuyModal){
-        return <BuyTariffModal isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
+        return <BuyTariffModal tarifPrice={price} accounts={wallets} isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
     }
     else if(!open)
     {return null} 
   return (
     <div onClick={onClose} className={style.overlay}>
-        <BuyTariffModal tarifPrice={price} isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
+        <BuyTariffModal wallets={wallets} tarifPrice={price} isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
         <div onClick={(e)=>{e.stopPropagation()}} className={style.modal_container_details}>
             <div className={style.top_layer}>
                 <div className={style.details_title_wrapper}>
-                    <h3>Detailed information {price}</h3>
+                    <h3>Detailed information</h3>
                     <div>
                         <span>Airdrop name:</span>
                         <span className={style.airdrop_name}>{name}</span>

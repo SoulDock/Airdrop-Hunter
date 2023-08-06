@@ -3,7 +3,7 @@ import style from './componentsStyles/popUp.module.css'
 import bsc from '../localimg/bsc.svg'
 import poligon from '../localimg/poligon.svg'
 import eth from '../localimg/ethereum.svg'
-export default function BuyTariffModal({Close,isOpen,tarifPrice}) {
+export default function BuyTariffModal({Close,isOpen,tarifPrice,accounts}) {
     if(!isOpen) return null
   return (
     <div onClick={Close} className={style.overlay}>
@@ -12,13 +12,12 @@ export default function BuyTariffModal({Close,isOpen,tarifPrice}) {
                 <p className={style.buytarif_description}>Payment from you access balance</p>
                 <div onClick={Close} className={style.clost_btn_outlayer}>
                     <div  className={style.close_btn}>
-                        <div className={style.close_btn_item1}></div>
-                        <div className={style.close_btn_item2}></div>
+                        <div className={style.close_btn_item1}/>
+                        <div className={style.close_btn_item2}/>
                     </div>
                 </div>
             </div>
-            <p className={style.buytarif_description}>You pay $ {tarifPrice} to get tarif '5 accounts' in possible AirDrop LayerZero</p>
-            {console.log(tarifPrice)}
+            <p className={style.buytarif_description}>You pay $ {tarifPrice} to get tarif '{accounts} accounts' in possible AirDrop LayerZero</p>
             <div className={style.grp}>
                 <div className={style.grp_row}>
                     <div className={style.row_name}>
