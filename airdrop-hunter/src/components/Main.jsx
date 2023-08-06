@@ -70,7 +70,7 @@ export default function Main() {
                     </div>
                 ))}
                     <div className={style.button_wrapper}>
-                        <button onClick={()=>setBuyModal(true)} className={style.buy_btn}>Buy</button>
+                        <button onClick={()=>setBuyModal(true)} className={style.buy_btn}>{item.button}</button>
                     </div>
                     <p className={style.bottom_text}>{item.subtext}</p>
                 </div>

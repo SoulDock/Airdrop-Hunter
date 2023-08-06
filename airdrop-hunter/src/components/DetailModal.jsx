@@ -32,9 +32,11 @@ export default function DetailModal({open, onClose, price, wallets, name}) {
                         <span className={style.airdrop_name}>{wallets}</span>
                     </div>
                 </div>
-                <div  className={style.close_btn} onClick={onClose}>
-                    <div className={style.close_btn_item1}></div>
-                    <div className={style.close_btn_item2}></div>
+                <div onClick={onClose} className={style.clost_btn_outlayer}>
+                    <div  className={style.close_btn}>
+                        <div className={style.close_btn_item1}></div>
+                        <div className={style.close_btn_item2}></div>
+                    </div>
                 </div>
             </div>
             <div className={style.details_wrapper}>

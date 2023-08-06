@@ -10,9 +10,11 @@ export default function BuyTariffModal({Close,isOpen,tarifPrice}) {
         <div onClick={(e)=>{e.stopPropagation()}} className={style.container_buy_tarif}>
             <div className={style.top_layer}>
                 <p className={style.buytarif_description}>Payment from you access balance</p>
-                <div  className={style.close_btn} onClick={Close}>
-                    <div className={style.close_btn_item1}></div>
-                    <div className={style.close_btn_item2}></div>
+                <div onClick={Close} className={style.clost_btn_outlayer}>
+                    <div  className={style.close_btn}>
+                        <div className={style.close_btn_item1}></div>
+                        <div className={style.close_btn_item2}></div>
+                    </div>
                 </div>
             </div>
             <p className={style.buytarif_description}>You pay $ {tarifPrice} to get tarif '5 accounts' in possible AirDrop LayerZero</p>
@@ -22,7 +24,7 @@ export default function BuyTariffModal({Close,isOpen,tarifPrice}) {
                     <div className={style.row_name}>
                         <p></p>
                     </div>
-                    <span className={style.row_mid}>Balance</span>
+                    <span className={style.row_mid_title}>Balance</span>
                     <div className={style.row_btn_dsbld}></div>
                 </div>
                 <div className={style.grp_row}>
@@ -30,7 +32,7 @@ export default function BuyTariffModal({Close,isOpen,tarifPrice}) {
                         <img src={poligon} alt="" />
                         <p>Polygon</p>
                     </div>
-                    <span className={style.row_mid}>-</span>
+                    <span className={style.row_mid}>0.00029141BNB</span>
                     <button className={style.row_btn}>Connect walet</button>
                 </div>
                 <div className={style.grp_row}>

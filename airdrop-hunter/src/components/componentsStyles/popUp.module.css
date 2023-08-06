@@ -40,6 +40,7 @@
     align-items: center;
 
     font-weight: normal;
+    position: relative;
 }
 .info{
     border: 1px solid #dddddd;
@@ -52,6 +53,11 @@
     font-weight: 500;
     text-align: left;
     line-height: 25px;
+}
+.clost_btn_outlayer{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .close_btn{
     width: 30px;
@@ -235,6 +241,9 @@
 .amout_btn_wrapper{
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .amout_title{
     text-align: center;
@@ -256,10 +265,12 @@
 }
 .deposit_title_wrapper{
     max-width: 400px;
+    text-align: left;
 }
 .deposit_title_wrapper h3{
     margin-top: 0;
     margin-bottom: 10px;
+    max-width: 300px;
 }
 .deposit_subtitle{
     display: flex;
@@ -294,8 +305,16 @@
     align-items: center;
     justify-content: center;
 }
-.row_mid{
+.row_mid,.row_mid_title{
     width: 20%;
+    word-break: break-all;
+}
+.row_mid_title{
+    font-size: 16px;
+    font-weight: 500;
+}
+.row_mid{
+    font-size: 14px;
 }
 .row_btn_dsbld,.row_btn{
     width: 40%;

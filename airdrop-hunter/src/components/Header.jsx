@@ -27,12 +27,15 @@ export default function ({open, onClose}) {
             </div>
             <div className={style.header_info}>
                 <button onClick={()=>setInfoModal(true)} className={style.deposit_btn}>Deposit</button>
-                <button className={style.wallet_btn}>Connect Wallet</button>
+                <div className={style.connect_button_wrapper}>
+                    <button className={style.wallet_btn}>Connect Wallet</button>
+                    <p>0.00029141BNB</p>
+                </div>
                 <div ref={menuRef} className={style.menu_wrapper}>
                     <div  onClick={()=>toggleMenu()} className={style.menu}>
-                        <div className={style.menu_decoration_item}></div>
-                        <div className={style.menu_decoration_item}></div>
-                        <div className={style.menu_decoration_item}></div>
+                        <div className={style.menu_decoration_item}/>
+                        <div className={style.menu_decoration_item}/>
+                        <div className={style.menu_decoration_item}/>
                     </div>
                     {isMenu?
                     <div className={style.pop_menu}>
