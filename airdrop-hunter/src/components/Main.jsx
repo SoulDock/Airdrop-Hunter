@@ -8,6 +8,7 @@ import BuyTariffModal from './BuyTariffModal';
 
 
 export default function Main() {
+
     const [isInfoModal, setInfoModal] = useState(false)
     const [isInfo, setInfo] = useState("")
     const [isDetailModal, setDetailModal] = useState(false)
@@ -20,6 +21,7 @@ export default function Main() {
     const [isCheckBoxId, setCheckBoxId] = useState(0)
     const [isChecked, setChecked] = useState(false)
     const [showText, setShowText] = useState(false);
+
   return (
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
@@ -44,11 +46,11 @@ export default function Main() {
                         <div className={style.profit_info}>
                             <div className={style.profit_col}>
                                 <p className={style.profit_coltitle}>expected airdrop</p>
-                                <p>{item.expected}</p>    
+                                <p className={style.profit_value}>{item.expected}</p>    
                             </div>
                             <div className={style.profit_col}>
                                 <p className={style.profit_coltitle}>probability</p>
-                                <p>{item.probability}</p>                            
+                                <p className={style.profit_value}>{item.probability}</p>                            
                             </div>
                         </div>
                     </div>
@@ -73,15 +75,21 @@ export default function Main() {
                         </div>             
                     </div>
                 ))}
-                {isChecked ?
+                {item.button == "Submit your Script" ? 
+                    <div className={style.button_wrapper}>
+                        <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLScNQg3Z4bxtx1a1XQbv4ObkXVK2uDPN6Kr59o6sitbB2qXgcQ/viewform' className={style.submit_btn}>{item.button}</a>
+                    </div> 
+                :  <div></div>}
+                {item.button == "BUY" ? 
                     <div className={style.button_wrapper}>
                         <button onClick={()=>{setBuyModal(true);setShowText(true)}} className={style.buy_btn}>{item.button}</button>
-                    </div>
-                :
+                    </div> 
+                :  <div></div>}
+                {item.button == "Coming soon" ?
                     <div className={style.button_wrapper}>
-                        <button disabled={true} className={style.buy_btn}>{item.button}</button>
-                    </div>
-                }
+                        <button className={style.buy_btn}>{item.button}</button>
+                    </div> 
+                :  <div></div>}
                     <p className={style.bottom_text}>{item.subtext}</p>
                 </div>
                 {item.labelStatus ? 

@@ -71,6 +71,9 @@
 .profit_title{
     margin: 0px 0px 10px 0px;
 }
+.profit_value{
+    font-weight: 600;
+}
 .profit_info{
     display: flex;
     justify-content: space-between;
@@ -122,6 +125,7 @@
 }
 .check_price{
     width: 20%;
+    font-weight: 600;
     text-align: center;
 }
 .check_detail_button{
@@ -135,8 +139,11 @@
     cursor: pointer;
 }
 /* BUTTON */
-
-.buy_btn{
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.buy_btn,.submit_btn{
     width: 100%;
     margin-top: 30px;
     padding: 15px 30px;
@@ -148,10 +155,14 @@
     font-size: 18px;
     transition: .3s linear;
 }
+.submit_btn{
+    text-align: center;
+    text-decoration: none;
+}
 .buy_btn:disabled{
     background-color: #e0e0e3;
 }
-.buy_btn:hover{
+.buy_btn:hover,.submit_btn:hover{
     cursor: pointer;
     background-color: #23ACDE;
     color: #fff;
