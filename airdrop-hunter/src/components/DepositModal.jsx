@@ -4,6 +4,8 @@ import amounts from '../Amounts.json'
 import usdtIcon from '../localimg/usdt.svg'
 import usdcIcon from '../localimg/usdc.svg'
 import daiIcon from '../localimg/dai.svg'
+import bscIcon from '../localimg/bsc.svg'
+import poligonIcon from '../localimg/poligon.svg'
 export default function DepositModal({open, onClose}) {
     const [isPoligon, setPoligon] = useState(true)
     const [isBsc, setBsc] = useState(false)
@@ -50,12 +52,16 @@ export default function DepositModal({open, onClose}) {
                         className={style.net_button}
                         onClick={()=>{setPoligon(true);setBsc(false)}}
                         style={isPoligon?{backgroundColor:"#EFEFEF"}:{backgroundColor:"transparent"}}
-                        >Poligon</button>
+                        >
+                        <img src={poligonIcon} alt="" />
+                        Poligon</button>
                         <button 
                         className={style.net_button}
                         onClick={()=>{setBsc(true);setPoligon(false)}}
                         style={isBsc?{backgroundColor:"#EFEFEF"}:{backgroundColor:"transparent"}}
-                        >BSC</button>
+                        >
+                        <img src={bscIcon} alt="" />    
+                        BSC</button>
                     </div>
                 </div>
                 <div className={style.connect_wallet}>
