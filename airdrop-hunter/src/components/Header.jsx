@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import style from './componentsStyles/header.module.css'
+import svgData from '../Svg.json'
+import SvgIcon from './SvgIcon'
 import DepositModal from './DepositModal'
 import SupportModal from './SupportModal'
 export default function ({open, onClose}) {
@@ -42,13 +44,34 @@ export default function ({open, onClose}) {
                     </div>
                     {isMenu?
                     <div className={style.pop_menu}>
-                        <a className={style.menu_link} href="">Refferal</a>
-                        <a className={style.menu_link} target='_blank' href="https://airdrop-hunter.site">About</a>
-                        <a className={style.menu_link} href="">Theme</a>
-                        <a className={style.menu_link} target='_blank' href="https://twitter.com/AirHunter_Drop">Twitter</a>
-                        <a className={style.menu_link} target='_blank' href="https://t.me/airdrop_hunter_bot">Telegram</a>
-                        <p className={style.menu_link} onClick={()=>{setSupportModal(true);setMenu(false)}}>Support</p>
-                        <a className={style.menu_link} href="">ChangeLog</a>
+                        <a className={style.menu_link} href="">
+                            Refferal 
+                            <SvgIcon path={svgData[0].ref} xmlns={svgData[0].refXmlns}/>
+                        </a>
+                        <a className={style.menu_link} target='_blank' href="https://airdrop-hunter.site">
+                            About
+                            <SvgIcon path={svgData[1].about} xmlns={svgData[1].aboutXmlns}/>
+                        </a>
+                        <a className={style.menu_link} href="">
+                            Theme
+                            <SvgIcon path={svgData[2].theme} xmlns={svgData[2].themeXmlns}/>
+                        </a>
+                        <a className={style.menu_link} target='_blank' href="https://twitter.com/AirHunter_Drop">
+                            Twitter
+                            <SvgIcon path={svgData[3].twitter} xmlns={svgData[3].twitterXmlns}/>
+                        </a>
+                        <a className={style.menu_link} target='_blank' href="https://t.me/airdrop_hunter_bot">
+                            Telegram
+                            <SvgIcon path={svgData[4].telegram} xmlns={svgData[4].telegramXmlns}/>
+                        </a>
+                        <p className={style.menu_link} onClick={()=>{setSupportModal(true);setMenu(false)}}>
+                            Support
+                            <SvgIcon path={svgData[5].support} xmlns={svgData[5].supportXmlns}/>
+                        </p>
+                        <a className={style.menu_link} href="">
+                            ChangeLog
+                            <SvgIcon path={svgData[5].support} xmlns={svgData[5].supportXmlns}/>
+                        </a>
                     </div>
                     :
                     <div className={style.pop_menu_hidden}></div>
