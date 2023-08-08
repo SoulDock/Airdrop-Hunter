@@ -46,31 +46,31 @@ export default function ({open, onClose}) {
                     <div className={style.pop_menu}>
                         <a className={style.menu_link} href="">
                             Refferal 
-                            <SvgIcon path={svgData[0].ref} xmlns={svgData[0].refXmlns}/>
+                            <SvgIcon path={svgData[0].path} xmlns={svgData[0].xmlns}/>
                         </a>
                         <a className={style.menu_link} target='_blank' href="https://airdrop-hunter.site">
                             About
-                            <SvgIcon path={svgData[1].about} xmlns={svgData[1].aboutXmlns}/>
+                            <SvgIcon path={svgData[1].path} xmlns={svgData[1].xmlns}/>
                         </a>
                         <a className={style.menu_link} href="">
                             Theme
-                            <SvgIcon path={svgData[2].theme} xmlns={svgData[2].themeXmlns}/>
+                            <SvgIcon path={svgData[2].path} xmlns={svgData[2].xmlns}/>
                         </a>
                         <a className={style.menu_link} target='_blank' href="https://twitter.com/AirHunter_Drop">
                             Twitter
-                            <SvgIcon path={svgData[3].twitter} xmlns={svgData[3].twitterXmlns}/>
+                            <SvgIcon path={svgData[3].path} xmlns={svgData[3].xmlns}/>
                         </a>
                         <a className={style.menu_link} target='_blank' href="https://t.me/airdrop_hunter_bot">
                             Telegram
-                            <SvgIcon path={svgData[4].telegram} xmlns={svgData[4].telegramXmlns}/>
+                            <SvgIcon path={svgData[4].path} xmlns={svgData[4].xmlns}/>
                         </a>
                         <p className={style.menu_link} onClick={()=>{setSupportModal(true);setMenu(false)}}>
                             Support
-                            <SvgIcon path={svgData[5].support} xmlns={svgData[5].supportXmlns}/>
+                            <SvgIcon path={svgData[5].path} xmlns={svgData[5].xmlns}/>
                         </p>
                         <a className={style.menu_link} href="">
                             ChangeLog
-                            <SvgIcon path={svgData[5].support} xmlns={svgData[5].supportXmlns}/>
+                            <SvgIcon path={svgData[5].path} xmlns={svgData[5].xmlns}/>
                         </a>
                     </div>
                     :
