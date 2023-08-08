@@ -25,7 +25,7 @@ export default function Main() {
 
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
     <DetailModal name={isTarifName} wallets={isNumberOfWalets} price={isAmountForDetails} open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
-    <BuyTariffModal accounts={isSelectedAccounts} isOpen={isBuyModal} Close={()=>setBuyModal(false)} tarifPrice={isSelectedAmount} ></BuyTariffModal>
+    <BuyTariffModal accounts={isSelectedAccounts} isOpen={isBuyModal} name={isTarifName} Close={()=>setBuyModal(false)} tarifPrice={isSelectedAmount} ></BuyTariffModal>
 
     <Header/>
 
@@ -64,7 +64,7 @@ export default function Main() {
                     <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
                             <div className={style.check_options}>
-                                <input key={i} checked={option.optionId === isCheckBoxId} onChange={()=>setCheckBoxId(option.optionId)} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setDisabled(false)}} />
+                                <input key={i} checked={option.optionId === isCheckBoxId} onChange={()=>setCheckBoxId(option.optionId)} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setTarifName(item.name);setDisabled(false)}} />
                                 <span>{option.accounts} accounts</span>
                             </div>
                             <div className={style.check_price}>{option.price}</div>

@@ -8,7 +8,7 @@ export default function DetailModal({open, onClose, price, wallets, name}) {
         {position: '1', text: 'Generation of wallets according to the tariff'}]);
     const [isSubtext, setSubtext] = useState("Automatic generation occurs after payment of the tariff")
     if(isBuyModal){
-        return <BuyTariffModal tarifPrice={price} accounts={wallets} isOpen={isBuyModal} Close={()=>setBuyModal(false)}></BuyTariffModal>
+        return <BuyTariffModal tarifPrice={price} accounts={wallets} isOpen={isBuyModal} name={name} Close={()=>setBuyModal(false)}></BuyTariffModal>
     }
     else if(!open)
     {return null} 
