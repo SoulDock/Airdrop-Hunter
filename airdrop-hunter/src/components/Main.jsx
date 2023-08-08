@@ -17,7 +17,7 @@ export default function Main() {
     const [isAmountForDetails, setAmountForDetails] = useState("")
     const [isNumberOfWalets, setNumberOfWalets] = useState("")
     const [isTarifName, setTarifName] = useState("")
-
+    const [isCheckBoxId, setCheckBoxId] = useState(0)
   return (
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
@@ -59,7 +59,7 @@ export default function Main() {
                     <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
                             <div>
-                                <input key={i} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts)}} />
+                                <input key={i} checked={option.optionId === isCheckBoxId} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setCheckBoxId(option.optionId)}} />
                                 <span>{option.accounts} accounts</span>
                             </div>
                             <div>{option.price}</div>
@@ -73,7 +73,7 @@ export default function Main() {
                     </div>
                 ))}
                     <div className={style.button_wrapper}>
-                        <button onClick={()=>setBuyModal(true)} className={style.buy_btn}>{item.button}</button>
+                        <button onClick={()=>{setBuyModal(true)}} className={style.buy_btn}>{item.button}</button>
                     </div>
                     <p className={style.bottom_text}>{item.subtext}</p>
                 </div>
