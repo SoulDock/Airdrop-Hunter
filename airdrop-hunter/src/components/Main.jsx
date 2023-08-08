@@ -18,6 +18,8 @@ export default function Main() {
     const [isNumberOfWalets, setNumberOfWalets] = useState("")
     const [isTarifName, setTarifName] = useState("")
     const [isCheckBoxId, setCheckBoxId] = useState(0)
+    const [isChecked, setChecked] = useState(false)
+    const [showText, setShowText] = useState(false);
   return (
     <>
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
@@ -51,30 +53,35 @@ export default function Main() {
                         </div>
                     </div>
                     <div className={style.check_header}>
-                        <p>Tariff</p>
+                        <p style={{width:"40%"}}>Tariff</p>
                         <p>Cost, $</p>
                         <p></p>
                     </div>
                     {item.options.map((option,i)=>(
                     <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
-                            <div>
-                                <input key={i} checked={option.optionId === isCheckBoxId} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setCheckBoxId(option.optionId)}} />
+                            <div className={style.check_options}>
+                                <input key={i} checked={option.optionId === isCheckBoxId} onChange={()=>setCheckBoxId(option.optionId)} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setChecked(true)}} />
                                 <span>{option.accounts} accounts</span>
                             </div>
-                            <div>{option.price}</div>
+                            <div className={style.check_price}>{option.price}</div>
                             {item.detail?
                                 <button onClick={()=>{{setDetailModal(true);setNumberOfWalets(option.accounts);setTarifName(item.name);setAmountForDetails(option.price)}}} className={style.check_detail_button}>Detail</button>
                             :
                                 <div className={style.check_detail_button}></div>
                             }
-                                
                         </div>             
                     </div>
                 ))}
+                {isChecked ?
                     <div className={style.button_wrapper}>
-                        <button onClick={()=>{setBuyModal(true)}} className={style.buy_btn}>{item.button}</button>
+                        <button onClick={()=>{setBuyModal(true);setShowText(true)}} className={style.buy_btn}>{item.button}</button>
                     </div>
+                :
+                    <div className={style.button_wrapper}>
+                        <button disabled={true} className={style.buy_btn}>{item.button}</button>
+                    </div>
+                }
                     <p className={style.bottom_text}>{item.subtext}</p>
                 </div>
                 {item.labelStatus ? 
