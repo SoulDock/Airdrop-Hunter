@@ -19,7 +19,7 @@ export default function Main() {
     const [isNumberOfWalets, setNumberOfWalets] = useState("")
     const [isTarifName, setTarifName] = useState("")
     const [isCheckBoxId, setCheckBoxId] = useState(0)
-    const [isChecked, setChecked] = useState(false)
+    const [isDisabled , setDisabled] = useState(true)
     const [showText, setShowText] = useState(false);
 
   return (
@@ -63,7 +63,7 @@ export default function Main() {
                     <div key={i} className={style.airdrop_check}>
                         <div className={style.check_item}>
                             <div className={style.check_options}>
-                                <input key={i} checked={option.optionId === isCheckBoxId} onChange={()=>setCheckBoxId(option.optionId)} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setChecked(true)}} />
+                                <input key={i} checked={option.optionId === isCheckBoxId} onChange={()=>setCheckBoxId(option.optionId)} type="checkbox" onClick={()=> {setSelectedAmount(option.price);setSelectedAccounts(option.accounts);setDisabled(false)}} />
                                 <span>{option.accounts} accounts</span>
                             </div>
                             <div className={style.check_price}>{option.price}</div>
@@ -82,7 +82,7 @@ export default function Main() {
                 :  <div></div>}
                 {item.button == "BUY" ? 
                     <div className={style.button_wrapper}>
-                        <button onClick={()=>{setBuyModal(true);setShowText(true)}} className={style.buy_btn}>{item.button}</button>
+                        <button disabled={isDisabled} onClick={()=>{setBuyModal(true);setShowText(true)}} className={style.buy_btn}>{item.button}</button>
                     </div> 
                 :  <div></div>}
                 {item.button == "Coming soon" ?
