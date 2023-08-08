@@ -63,7 +63,7 @@ export default function DetailModal({open, onClose, price, wallets, name}) {
                     <div>
                         <div>{isOption.map((item,i)=>(
                             <div className={style.details_unwrapped}>
-                                <span>{item.position}</span>
+                                <span>{item.position}:</span>
                                 <img style={{maxWidth:"20px"}} src={item.img} alt="" />
                                 {item.text}
                             </div>
