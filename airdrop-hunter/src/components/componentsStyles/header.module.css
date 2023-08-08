@@ -26,7 +26,7 @@
 .header_info{
     max-width: 500px;
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 10px;
 }
 .deposit_btn{
