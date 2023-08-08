@@ -33,6 +33,8 @@
 }
 .support_modal_container{
     max-width: 900px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 .modal_container,.modal_container_details,.container_buy_tarif,.support_modal_container{
     padding: 16px;
