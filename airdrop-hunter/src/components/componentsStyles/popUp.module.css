@@ -158,6 +158,8 @@
     font-size: 12px;
     background-color: #E0E3F5;
     border-bottom: 1px solid #F7F8FA;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 .details_btn{
     border: none;

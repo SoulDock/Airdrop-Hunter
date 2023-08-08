@@ -6,7 +6,6 @@ import InfoModal from './InfoModal';
 import DetailModal from './DetailModal';
 import BuyTariffModal from './BuyTariffModal';
 
-
 export default function Main() {
 
     const [isInfoModal, setInfoModal] = useState(false)
@@ -20,14 +19,16 @@ export default function Main() {
     const [isTarifName, setTarifName] = useState("")
     const [isCheckBoxId, setCheckBoxId] = useState(0)
     const [isDisabled , setDisabled] = useState(true)
-    const [showText, setShowText] = useState(false);
 
   return (
     <>
+
     <InfoModal open={isInfoModal} onClose={()=>setInfoModal(false)} infoText={isInfo}/>
     <DetailModal name={isTarifName} wallets={isNumberOfWalets} price={isAmountForDetails} open={isDetailModal} onClose={()=>setDetailModal(false)} infoText={isInfo}/>
     <BuyTariffModal accounts={isSelectedAccounts} isOpen={isBuyModal} Close={()=>setBuyModal(false)} tarifPrice={isSelectedAmount} ></BuyTariffModal>
+
     <Header/>
+
     <div className={style.container}>
         {
             data.map((item, i)=>(
@@ -36,7 +37,7 @@ export default function Main() {
                     <div className={style.airdrop_title}>
                         <img className={style.airdrop_icon} src={item.img} alt="" />
                         <h2 className={style.airdrop_title_text}>{item.name}</h2>
-                    </div>
+                    </div>                   
                     <div>
                         <p className={style.airdrop_subtext}>{item.text}</p>
                     </div>
@@ -82,7 +83,7 @@ export default function Main() {
                 :  <div></div>}
                 {item.button == "BUY" ? 
                     <div className={style.button_wrapper}>
-                        <button disabled={isDisabled} onClick={()=>{setBuyModal(true);setShowText(true)}} className={style.buy_btn}>{item.button}</button>
+                        <button disabled={isDisabled} onClick={()=>{setBuyModal(true)}} className={style.buy_btn}>{item.button}</button>
                     </div> 
                 :  <div></div>}
                 {item.button == "Coming soon" ?
