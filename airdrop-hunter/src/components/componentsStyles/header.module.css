@@ -105,10 +105,12 @@
 
 .menu_link{
     text-decoration: none;
+    margin: 0;
     margin-bottom: 16px;
     font-size: 16px;
     color: #212529;
     transition: .1s linear;
+    cursor: pointer;
 }
 .menu_link:nth-child(7){
     margin-bottom: 0;

@@ -31,7 +31,10 @@
     max-height: 80vh;
     overflow-y: scroll;
 }
-.modal_container,.modal_container_details,.container_buy_tarif{
+.support_modal_container{
+    max-width: 900px;
+}
+.modal_container,.modal_container_details,.container_buy_tarif,.support_modal_container{
     padding: 16px;
 
     background-color: #fff;
@@ -349,7 +352,39 @@
     margin-top: 10px;
     margin-bottom: 5px;
 }
-
+/* SUPPORT MODAL */
+.support_content{
+    width: 700px;
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.support_send_btn{
+    width: 100px;
+    padding: 10px;
+    color: #fff;
+    background-color: #23ACDE;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.support_input_wrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.support_input_wrapper input,.support_input_wrapper textarea{
+    width: 99%;
+}
+.support_input_wrapper textarea{
+    resize: vertical;
+}
+@media screen and (max-width:760px){
+    .support_content{
+        width: 500px;
+    }
+}
 @media screen and (max-width:990px) {
     .details_wrapper{
         flex-direction: column;
@@ -365,11 +400,19 @@
     .modal_container,.modal_container_details,.container_buy_tarif{
         margin: 10px;
     }
+    .support_content{
+        width: 300px;
+    }
     .info{
         max-height: 400px;
         overflow-y: scroll;
     }
     .row_name{
         flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:321px){
+    .support_content{
+        width: 250px;
     }
 }

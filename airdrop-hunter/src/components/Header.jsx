@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react'
 import style from './componentsStyles/header.module.css'
 import DepositModal from './DepositModal'
+import SupportModal from './SupportModal'
 export default function ({open, onClose}) {
     const [isMenu, setMenu] = useState(false)
     const [isInfoModal, setInfoModal] = useState(false)
+    const [isSupportModal, setSupportModal] = useState(false)
     const toggleMenu = ()=>{
         isMenu ? setMenu(false) : setMenu(true)
     }
@@ -19,6 +21,7 @@ export default function ({open, onClose}) {
   return (
     <div className={style.header}>
         <DepositModal open={isInfoModal} onClose={()=>setInfoModal(false)}/>
+        <SupportModal open={isSupportModal} onClose={()=>setSupportModal(false)}/>
         <div className={style.beta_text}>This project is beta. DYOR</div>
         <div className={style.header_inner}>
             <div className={style.header_title}>
@@ -40,11 +43,11 @@ export default function ({open, onClose}) {
                     {isMenu?
                     <div className={style.pop_menu}>
                         <a className={style.menu_link} href="">Refferal</a>
-                        <a className={style.menu_link} href="">About</a>
+                        <a className={style.menu_link} target='_blank' href="https://airdrop-hunter.site">About</a>
                         <a className={style.menu_link} href="">Theme</a>
-                        <a className={style.menu_link} href="">Twitter</a>
-                        <a className={style.menu_link} href="">Telegram</a>
-                        <a className={style.menu_link} href="">Support</a>
+                        <a className={style.menu_link} target='_blank' href="https://twitter.com/AirHunter_Drop">Twitter</a>
+                        <a className={style.menu_link} target='_blank' href="https://t.me/airdrop_hunter_bot">Telegram</a>
+                        <p className={style.menu_link} onClick={()=>{setSupportModal(true);setMenu(false)}}>Support</p>
                         <a className={style.menu_link} href="">ChangeLog</a>
                     </div>
                     :
