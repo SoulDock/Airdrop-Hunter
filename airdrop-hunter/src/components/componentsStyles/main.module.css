@@ -100,6 +100,7 @@
 .check_header{
     padding: 0 10px;
     font-size: 12px;
+    font-weight: 600;
     color: #636755;
     display: flex;
     align-items: center;
