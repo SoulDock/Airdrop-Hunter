@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from 'react'
+import { useBalance, useAccount } from 'wagmi'
+import { buy, getBalance } from '../shared/methods.js';
 import style from './componentsStyles/popUp.module.css'
 import bsc from '../localimg/bsc.svg'
 import poligon from '../localimg/poligon.svg'
 import eth from '../localimg/ethereum.svg'
+import usdt from '../localimg/usdt.svg'
 export default function BuyTariffModal({Close,isOpen,tarifPrice,accounts,name}) {
+    const {address} = useAccount();
+    const [balance, setBalance] = useState(0)
+    useEffect(() => {
+        if (address) {
+            getBalance(address).then(item => {
+                setBalance(parseInt(item/ 10n ** 18n));
+            })
+        } else {
+            setBalance(0)
+        }
+    }, [address])
+
     if(!isOpen) return null
   return (
     <div onClick={Close} className={style.overlay}>
@@ -28,27 +43,11 @@ export default function BuyTariffModal({Close,isOpen,tarifPrice,accounts,name}) 
                 </div>
                 <div className={style.grp_row}>
                     <div className={style.row_name}>
-                        <img src={poligon} alt="" />
-                        <p>Polygon</p>
+                        <img src={usdt} alt="" />
+                        <p>USDT</p>
                     </div>
-                    <span className={style.row_mid}>0.00029141BNB</span>
-                    <button className={style.row_btn}>Connect walet</button>
-                </div>
-                <div className={style.grp_row}>
-                    <div className={style.row_name}>
-                        <img src={bsc} alt="" />
-                        <p>Polygon</p>
-                    </div>
-                    <span className={style.row_mid}>-</span>
-                    <button className={style.row_btn}>Connect walet</button>
-                </div>
-                <div className={style.grp_row}>
-                    <div className={style.row_name}>
-                        <img src={eth} alt="" />
-                        <p>Polygon</p>
-                    </div>
-                    <span className={style.row_mid}>-</span>
-                    <button className={style.row_btn}>Connect walet</button>
+                    <span className={style.row_mid}>{balance}</span>
+                    <button className={style.row_btn} onClick={() => buy(tarifPrice, address)}>Pay</button>
                 </div>
             </div>
             <div className={style.check_area}>

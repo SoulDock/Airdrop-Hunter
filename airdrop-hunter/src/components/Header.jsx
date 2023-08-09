@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { Web3Button  } from "@web3modal/react"
 import style from './componentsStyles/header.module.css'
 import svgData from '../Svg.json'
 import SvgIcon from './SvgIcon'
@@ -22,7 +23,7 @@ export default function ({open, onClose}) {
     })
   return (
     <div className={style.header}>
-        <DepositModal open={isInfoModal} onClose={()=>setInfoModal(false)}/>
+        {/*<DepositModal open={isInfoModal} onClose={()=>setInfoModal(false)}/>*/}
         <SupportModal open={isSupportModal} onClose={()=>setSupportModal(false)}/>
         <div className={style.beta_text}>This project is beta. DYOR</div>
         <div className={style.header_inner}>
@@ -31,10 +32,9 @@ export default function ({open, onClose}) {
                 <h3 className={style.header_title_text} style={{color:"#23ACDE"}}>HUNTER</h3 >
             </div>
             <div className={style.header_info}>
-                <button onClick={()=>setInfoModal(true)} className={style.deposit_btn}>Deposit</button>
+                {/*<button onClick={()=>setInfoModal(true)} className={style.deposit_btn}>Deposit</button>*/}
                 <div className={style.connect_button_wrapper}>
-                    <button className={style.wallet_btn}>Connect Wallet</button>
-                    <p>0.00029141BNB</p>
+                    <Web3Button />
                 </div>
                 <div ref={menuRef} className={style.menu_wrapper}>
                     <div  onClick={()=>toggleMenu()} className={style.menu}>
@@ -45,7 +45,7 @@ export default function ({open, onClose}) {
                     {isMenu?
                     <div className={style.pop_menu}>
                         <a className={style.menu_link} href="">
-                            Refferal 
+                            Refferal
                             <SvgIcon path={svgData[0].path} xmlns={svgData[0].xmlns}/>
                         </a>
                         <a className={style.menu_link} target='_blank' href="https://airdrop-hunter.site">
